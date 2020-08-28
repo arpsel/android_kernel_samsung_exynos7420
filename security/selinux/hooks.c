@@ -6793,7 +6793,7 @@ static __init int selinux_init(void)
 
 	if (register_security(&selinux_ops))
 		panic("SELinux: Unable to register with kernel.\n");
-#if defined(SELINUX_ALWAYS_ENFORCE)
+	#if defined(SELINUX_ALWAYS_ENFORCE)
 	selinux_enforcing = 1;
 #elif defined(SELINUX_ALWAYS_PERMISSIVE)
 	selinux_enforcing = 0;
